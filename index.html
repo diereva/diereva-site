@@ -15,7 +15,7 @@
     --mid: #888888;
     --light: #cccccc;
     --dim: #444444;
-    --container-width: 1100px; /* La colonna portante */
+    --grid-max: 1100px;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,14 +30,14 @@
     line-height: 1.7;
   }
 
-  /* ── ALLINEAMENTO RICHIESTO ── */
+  /* ── GRID SYSTEM (Tutto allineato qui) ── */
   .grid-container {
-    max-width: var(--container-width);
+    max-width: var(--grid-max);
     margin: 0 auto;
     padding: 0 48px;
   }
 
-  /* ── NAV (Libera di iniziare prima) ── */
+  /* ── NAV (Libera ai bordi) ── */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -46,9 +46,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 48px;
-    background: rgba(13,13,13,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(58,123,213,0.15);
+    background: rgba(13,13,13,0.9);
+    border-bottom: 1px solid rgba(58,123,213,0.2);
   }
 
   .nav-logo {
@@ -76,7 +75,6 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 10vh;
-    overflow: hidden;
   }
 
   .hero-bg {
@@ -85,7 +83,7 @@
     background-image: url('img/cieli_26_cover.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.35);
+    filter: brightness(0.4);
     z-index: 0;
   }
 
@@ -101,6 +99,8 @@
 
   .hero-bio {
     font-size: 14px;
+    line-height: 1.8;
+    color: var(--light);
     max-width: 560px;
     margin-bottom: 40px;
     border-left: 2px solid var(--blue);
@@ -118,8 +118,7 @@
     color: var(--offwhite);
     margin-right: 12px;
   }
-
-  .btn.filled { background: var(--blue); }
+  .btn.filled { background: var(--blue); color: white; }
 
   /* ── SECTIONS ── */
   section { padding: 100px 0; }
@@ -155,7 +154,6 @@
 
   .statement-photo { width: 100%; aspect-ratio: 1; object-fit: cover; }
 
-  /* ── GRIDS ── */
   .releases-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -164,9 +162,9 @@
   }
 
   .release-card { text-decoration: none; display: block; }
-  .release-cover { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: var(--dim); }
+  .release-cover { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: #222; }
   .release-info { padding: 10px 0 0; }
-  .release-title { font-size: 12px; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .release-title { font-size: 12px; font-weight: 500; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   .live-grid {
     display: grid;
@@ -176,14 +174,6 @@
   }
   .live-item { padding: 20px 24px; border-bottom: 1px solid var(--dim); display: flex; justify-content: space-between; }
   .live-item:nth-child(odd) { border-right: 1px solid var(--dim); }
-
-  .remix-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 48px;
-    border: 1px solid var(--dim);
-  }
-  .remix-item { padding: 16px 20px; border-bottom: 1px solid var(--dim); border-right: 1px solid var(--dim); }
 
   .setup-grid, .countries-grid {
     display: grid;
@@ -196,7 +186,7 @@
   .countries-grid { grid-template-columns: repeat(4, 1fr); }
   .setup-item, .country-item { background: var(--dark2); padding: 24px; }
 
-  /* ── FOOTER (Libero di iniziare prima) ── */
+  /* ── FOOTER (Libero ai bordi) ── */
   footer {
     background: #080808;
     border-top: 1px solid var(--dim);
@@ -210,15 +200,16 @@
 
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 6px; }
   .footer-links { display: flex; gap: 24px; }
-  .footer-links a { font-size: 11px; text-decoration: none; color: var(--mid); }
+  .footer-links a { font-size: 11px; color: var(--mid); text-decoration: none; }
 
   @media (max-width: 768px) {
-    .statement-grid, .live-grid, .remix-grid, .setup-grid, .countries-grid { grid-template-columns: 1fr; }
+    .statement-grid, .live-grid, .setup-grid, .countries-grid { grid-template-columns: 1fr; }
     .live-item:nth-child(odd) { border-right: none; }
     .releases-grid { grid-template-columns: repeat(2, 1fr); }
     .grid-container { padding: 0 24px; }
   }
 
+  /* Fade in animation */
   .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease forwards; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 </style>
@@ -240,9 +231,9 @@
     <p class="section-label">Artistic Portfolio</p>
     <h1>DIEREVA</h1>
     <p style="font-size:14px; color:var(--light); margin-bottom:8px;">A musical project by Gigi Giustiniani</p>
-    <p style="font-size:12px; color:var(--mid); margin-bottom:40px; letter-spacing:2px;">Mycelial Electronic Downtempo · Milan, Italy · Active since 2021</p>
+    <p style="font-size:12px; color:var(--mid); margin-bottom:40px; letter-spacing:2px;">Mycelial Electronic Downtempo · Milan, Italy</p>
     <div class="hero-bio">
-      Electronic musician and documentary filmmaker. Diereva weaves analogue synthesis, field recordings and live improvisation into cinematic, introspective soundscapes. Releases on independent labels across Russia, Mexico, Turkey, Ukraine, Portugal, Germany and the UK.
+      Electronic musician and documentary filmmaker. Diereva weaves analogue synthesis, field recordings and live improvisation into cinematic, introspective soundscapes.
     </div>
     <div class="social-links">
       <a href="https://diereva.bandcamp.com" target="_blank" class="btn filled">Bandcamp</a>
@@ -254,4 +245,47 @@
 <div id="statement">
   <div class="grid-container">
     <section>
-      <p class="
+      <p class="section-label fade-in">Artist Statement</p>
+      <h2 class="fade-in">Artistic Practice</h2>
+      <div class="section-rule fade-in"></div>
+      
+      <div class="statement-grid fade-in">
+        <img src="img/masada1.jpg" alt="Diereva live" class="statement-photo">
+        <div class="statement-text">
+          <p>Diereva is rooted in the idea of music as a living ecosystem: layered, interconnected, and in constant flux. The project draws on organic field recordings, analogue synthesis, and the unpredictable energy of live improvisation.</p>
+          <p style="margin-top:20px;">The music moves through the territories of organic downtempo — shifting between ambient drifts and tighter rhythms — while maintaining a consistently tactile and cinematic character.</p>
+        </div>
+      </div>
+
+      <p class="section-label fade-in" style="margin-top:100px" id="releases">Discography</p>
+      <h2 class="fade-in">Releases</h2>
+      <div class="section-rule fade-in"></div>
+      
+      <div class="releases-grid fade-in">
+        <a href="https://found.ee/aLZPpH" target="_blank" class="release-card">
+          <img src="img/cieli_26_cover.jpg" class="release-cover">
+          <div class="release-info"><div class="release-title">Cieli EP</div></div>
+        </a>
+        <a href="https://soundcloud.com/diereva/sets/the-other-thing-new26" target="_blank" class="release-card">
+          <img src="img/the_otherthongnew.jpg" class="release-cover">
+          <div class="release-info"><div class="release-title">The Other Thing</div></div>
+        </a>
+        <a href="https://bfan.link/point-of-view-2" target="_blank" class="release-card">
+          <img src="img/Diereva_POV_Cover.jpg" class="release-cover">
+          <div class="release-info"><div class="release-title">Point Of View</div></div>
+        </a>
+      </div>
+
+      <p class="section-label fade-in" style="margin-top:80px">Performance</p>
+      <div class="section-rule fade-in"></div>
+      <div class="live-grid fade-in">
+        <div class="live-item"><div><div class="live-venue">La Nature Festival</div><div class="live-loc">Belgium</div></div></div>
+        <div class="live-item"><div><div class="live-venue">Beate Uwe</div><div class="live-loc">Berlin</div></div></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">DIEREVA</div>
+  <div class="footer-links">
