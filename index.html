@@ -208,18 +208,23 @@
     background: var(--dark2);
     max-width: 100%;
     padding: 100px 0;
+    overflow-x: hidden;
   }
 
   .inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 48px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   #statement .inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 48px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .statement-grid {
@@ -365,6 +370,8 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-top: 48px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .releases-grid--5 {
@@ -574,7 +581,7 @@
         <p>This approach to sound is inseparable from Gigi's career as a documentary filmmaker. Specialising in social documentaries and mountain cinema, with fieldwork in Mauritania, Benin, Brazil, and Ethiopia (often involving music-related research), he brings to his productions a practice of "deep listening" and a visual sensibility matured in remote human environments.</p>
       </div>
     </div>
-    <p class="fade-in" style="margin-top:32px;line-height:1.8;color:var(--light);">However, his connection to music has much deeper roots: it began with the study of the violin at the age of four, followed by the electric bass in his teens, exploring genres far removed from electronic music for decades. It was only around the age of 40 that he encountered synthesizers and machines; the Diereva project was born from this collision between acoustic rigour and new digital possibilities.</p>
+    <p class="fade-in" style="margin-top:16px;line-height:1.8;color:var(--light);">However, his connection to music has much deeper roots: it began with the study of the violin at the age of four, followed by the electric bass in his teens, exploring genres far removed from electronic music for decades. It was only around the age of 40 that he encountered synthesizers and machines; the Diereva project was born from this collision between acoustic rigour and new digital possibilities.</p>
 
     <!-- RELEASES -->
     <div id="releases">
@@ -722,53 +729,49 @@
     <h2 class="fade-in" style="margin-top:80px">Main Live Sets</h2>
     <a href="https://soundcloud.com/diereva/sets/live?si=dc146ab4a25c4be7ae28aef3a5dc72fe" target="_blank" class="live-link fade-in">▶ Listen to live sets on SoundCloud →</a>
     <div class="section-rule fade-in"></div>
-    <div class="live-grid fade-in">
-      <div class="live-item">
-        <div><div class="live-venue">La Nature Festival</div><div class="live-loc">Belgium</div></div>
-      </div>
-      <div class="live-item">
-        <div><div class="live-venue">Beate Uwe</div><div class="live-loc">Berlin, Germany</div></div>
-      </div>
-      <div class="live-item">
-        <div><div class="live-venue">Atlas Festival</div><div class="live-loc">Italy</div></div>
-      </div>
-      <div class="live-item">
-        <div><div class="live-venue">Masada</div><div class="live-loc">Milan, Italy</div></div>
-      </div>
-      <div class="live-item">
-        <div><div class="live-venue">Tanzfreunde</div><div class="live-loc">Germany</div></div>
-      </div>
-      <div class="live-item" style="border-bottom:none">
-        <div><div class="live-venue">Sunfish / K-Pax</div><div class="live-loc">Lago Maggiore</div></div>
-      </div>
+    <div class="fade-in" style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#444;margin-top:24px;width:100%;box-sizing:border-box;">
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">La Nature Festival</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Belgium</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Beate Uwe</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Berlin, Germany</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Atlas Festival</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Italy</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Masada</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Milan, Italy</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Tanzfreunde</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Germany</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Sunfish / K-Pax</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Lago Maggiore</div></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
     </div>
 
     <!-- SETUP -->
-    <p class="section-label fade-in" style="margin-top:80px">Technical</p>
-    <h2 class="fade-in">Live Setup</h2>
+    <h2 class="fade-in" style="margin-top:80px">Live Setup</h2>
     <div class="section-rule fade-in"></div>
-    <div class="setup-grid fade-in">
-      <div class="setup-item"><div class="setup-key">Software</div><div class="setup-val">Ableton Live</div></div>
-      <div class="setup-item"><div class="setup-key">Controller</div><div class="setup-val">APC40 mkII</div></div>
-      <div class="setup-item"><div class="setup-key">Synthesizer</div><div class="setup-val">Minilogue XD</div></div>
-      <div class="setup-item"><div class="setup-key">Sources</div><div class="setup-val">Field recordings, organic sounds</div></div>
-      <div class="setup-item"><div class="setup-key">Set duration</div><div class="setup-val">1h / 2h</div></div>
-      <div class="setup-item"><div class="setup-key">Requirements</div><div class="setup-val">2 monitors · 20 min setup</div></div>
+    <div class="fade-in" style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#444;margin-top:24px;width:100%;box-sizing:border-box;">
+      <div style="background:#111;padding:16px 20px;"><div style="color:#888;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Software</div><div style="color:#f0ede8;font-size:14px;margin-top:6px;">Ableton Live</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="color:#888;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Controller</div><div style="color:#f0ede8;font-size:14px;margin-top:6px;">APC40 mkII</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="color:#888;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Synthesizer</div><div style="color:#f0ede8;font-size:14px;margin-top:6px;">Minilogue XD</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="color:#888;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Sources</div><div style="color:#f0ede8;font-size:14px;margin-top:6px;">Field recordings, organic sounds</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="color:#888;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Set duration</div><div style="color:#f0ede8;font-size:14px;margin-top:6px;">1h / 2h</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="color:#888;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Requirements</div><div style="color:#f0ede8;font-size:14px;margin-top:6px;">2 monitors · 20 min setup</div></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
     </div>
 
     <!-- COUNTRIES -->
-    <p class="section-label fade-in" style="margin-top:80px">Distribution</p>
-    <h2 class="fade-in">International Releases and Collaborations</h2>
+    <h2 class="fade-in" style="margin-top:80px">International Releases and Collaborations</h2>
     <div class="section-rule fade-in"></div>
-    <div class="countries-grid fade-in">
-      <div class="country-item"><div class="country-name">Russia</div><div class="country-label">Art Of Downtempo</div></div>
-      <div class="country-item"><div class="country-name">Mexico</div><div class="country-label">Archfiend Corp., Nativa Records, BPB</div></div>
-      <div class="country-item"><div class="country-name">Turkey</div><div class="country-label">Kanto Records</div></div>
-      <div class="country-item"><div class="country-name">Germany</div><div class="country-label">Serafin Audio, Hippies 2.0</div></div>
-      <div class="country-item"><div class="country-name">Ukraine</div><div class="country-label">Povilno Records</div></div>
-      <div class="country-item"><div class="country-name">Portugal</div><div class="country-label">Octo Records</div></div>
-      <div class="country-item"><div class="country-name">Greece</div><div class="country-label">Shango Records</div></div>
-      <div class="country-item"><div class="country-name">China</div><div class="country-label">Autumn Equinox</div></div>
+    <div class="fade-in" style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#444;margin-top:24px;width:100%;box-sizing:border-box;">
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Russia</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Art Of Downtempo</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Mexico</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Archfiend Corp., Nativa Records, BPB</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Turkey</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Kanto Records</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Germany</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Serafin Audio, Hippies 2.0</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Ukraine</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Povilno Records</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Portugal</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Octo Records</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">Greece</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Shango Records</div></div>
+      <div style="background:#111;padding:16px 20px;"><div style="font-weight:500;color:#f0ede8;font-size:14px;">China</div><div style="color:#3a7bd5;font-size:12px;margin-top:4px;">Autumn Equinox</div></div>
+      <div style="background:#111;"></div>
+      <div style="background:#111;"></div>
     </div>
   </div>
 </div>
