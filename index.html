@@ -210,6 +210,12 @@
     padding: 100px 0;
   }
 
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
   #statement .inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -372,10 +378,12 @@
     .releases-grid { grid-template-columns: repeat(3, 1fr); }
     .statement-grid { grid-template-columns: 1fr; }
     nav { padding: 16px 24px; }
-    #home { padding: 0 24px 60px; }
+    #home { padding: 0 0 60px; }
     section { padding: 60px 24px; }
     .countries-grid { grid-template-columns: repeat(2, 1fr); }
     .setup-grid { grid-template-columns: repeat(2, 1fr); }
+    .inner { padding: 0 24px; margin: 0; max-width: 100%; }
+    h2 { font-size: clamp(32px, 8vw, 80px); }
   }
 
   .release-card {
@@ -564,9 +572,9 @@
         <p>Diereva is rooted in the idea of music as a living ecosystem: layered, interconnected, and in constant flux. The name itself evokes the structure of a tree, and the project draws on organic field recordings, analogue synthesis, and the unpredictable energy of live improvisation.</p>
         <p>The music moves through the territories of organic downtempo — shifting between ambient drifts and tighter rhythms — while maintaining a consistently tactile and cinematic character. Every track is born from physical materials: sounds captured in real environments or extracted from film, then processed through analogue hardware and shaped in real time. This duality, ranging from the exploration of live sets to the precision of studio composition, is the very soul of Diereva.</p>
         <p>This approach to sound is inseparable from Gigi's career as a documentary filmmaker. Specialising in social documentaries and mountain cinema, with fieldwork in Mauritania, Benin, Brazil, and Ethiopia (often involving music-related research), he brings to his productions a practice of "deep listening" and a visual sensibility matured in remote human environments.</p>
-        <p>However, his connection to music has much deeper roots: it began with the study of the violin at the age of four, followed by the electric bass in his teens, exploring genres far removed from electronic music for decades. It was only around the age of 40 that he encountered synthesizers and machines; the Diereva project was born from this collision between acoustic rigour and new digital possibilities.</p>
       </div>
     </div>
+    <p class="fade-in" style="margin-top:32px;line-height:1.8;color:var(--light);">However, his connection to music has much deeper roots: it began with the study of the violin at the age of four, followed by the electric bass in his teens, exploring genres far removed from electronic music for decades. It was only around the age of 40 that he encountered synthesizers and machines; the Diereva project was born from this collision between acoustic rigour and new digital possibilities.</p>
 
     <!-- RELEASES -->
     <div id="releases">
@@ -666,40 +674,50 @@
     <!-- REMIX WORK -->
     <p class="section-label fade-in" style="margin-top:60px;color:var(--offwhite);font-size:13px;letter-spacing:3px">Remix Work</p>
     <div class="section-rule fade-in"></div>
-    <div class="remix-grid fade-in">
-      <div class="remix-item">
-        <div class="remix-title">SiddEffects — Prayana</div><div class="remix-meta">Art Of Downtempo (RU) · 2026</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">Der EVA — Sonic Mirage</div><div class="remix-meta">Autumn Equinox (CN) · 2025</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">I'm Mady — Wheel of Life</div><div class="remix-meta">Autumn Equinox · 2025</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">I'm Mady — Leichte Turbulenzen</div><div class="remix-meta">Shango Records (GR) · 2025</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">I'm Mady — 4 Jahreszeiten</div><div class="remix-meta">Self-release · 2025</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">Holy Moly — Windy</div><div class="remix-meta">Self-release · 2025</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">Laaar — Der Ak Vo</div><div class="remix-meta">Kanto Records · Nov 2024</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">DJ Omlet — Kitchen To Kitchen</div><div class="remix-meta">Pool Side Remix · 2024</div>
-      </div>
-      <div class="remix-item">
-        <div class="remix-title">Der EVA — Embers</div><div class="remix-meta">Self-release · 2023</div>
-      </div>
-      <div class="remix-item" style="border-bottom:none">
-        <div class="remix-title">blue Dietrich — Mirage</div><div class="remix-meta">Self-release · 2023</div>
-      </div>
+    <div class="releases-grid fade-in">
+      <a href="https://go.protonradio.com/r/rlWjzjiJjGpJE" target="_blank" class="release-card">
+        <img src="img/prayana.png" alt="SiddEffects — Prayana" class="release-cover">
+        <div class="release-info"><div class="release-title">SiddEffects — Prayana<span class="release-year">2026</span></div><div class="release-label">Art Of Downtempo (RU)</div></div>
+      </a>
+      <a href="https://go.protonradio.com/r/rlNYjlR6f16Z8" target="_blank" class="release-card">
+        <img src="img/room420.webp" alt="I'm Mady — Room 420" class="release-cover">
+        <div class="release-info"><div class="release-title">I'm Mady — Room 420<span class="release-year">2025</span></div><div class="release-label">Art Of Downtempo (RU)</div></div>
+      </a>
+      <a href="https://go.protonradio.com/r/rlTugNqb-1YhQ" target="_blank" class="release-card">
+        <img src="img/sonic_mirage.jpg" alt="Der EVA — Sonic Mirage" class="release-cover">
+        <div class="release-info"><div class="release-title">Der EVA — Sonic Mirage<span class="release-year">2025</span></div><div class="release-label">Autumn Equinox (CN)</div></div>
+      </a>
+      <a href="https://go.protonradio.com/r/rl_CnV0uTm_2E" target="_blank" class="release-card">
+        <img src="img/wheel_of_life.jpg" alt="I'm Mady — Wheel of Life" class="release-cover">
+        <div class="release-info"><div class="release-title">I'm Mady — Wheel of Life<span class="release-year">2025</span></div><div class="release-label">Autumn Equinox</div></div>
+      </a>
+      <a href="https://soundcloud.com/slowpunch/sets/im-mady-leichte-turbulenzen-1" target="_blank" class="release-card">
+        <img src="img/leichte_turbulenzen.png" alt="I'm Mady — Leichte Turbulenzen" class="release-cover">
+        <div class="release-info"><div class="release-title">I'm Mady — Leichte Turbulenzen<span class="release-year">2025</span></div><div class="release-label">Slow Punchhh</div></div>
+      </a>
+      <a href="#" target="_blank" class="release-card">
+        <img src="img/jahreszeiten.png" alt="I'm Mady — 4 Jahreszeiten" class="release-cover">
+        <div class="release-info"><div class="release-title">I'm Mady — 4 Jahreszeiten<span class="release-year">2025</span></div><div class="release-label">Shango Records</div></div>
+      </a>
+      <a href="https://soundcloud.com/shango-records/holy-moly-windy-diereva-remix" target="_blank" class="release-card">
+        <img src="img/windy.png" alt="Holy Moly — Windy" class="release-cover">
+        <div class="release-info"><div class="release-title">Holy Moly — Windy<span class="release-year">2024</span></div><div class="release-label">Shango Records (GR)</div></div>
+      </a>
+      <a href="https://soundcloud.com/djomlet/dj-omlet-kitchen-to-kitchen-1" target="_blank" class="release-card">
+        <img src="img/omlet.png" alt="DJ Omlet — Kitchen To Kitchen" class="release-cover">
+        <div class="release-info"><div class="release-title">DJ Omlet — Kitchen To Kitchen<span class="release-year">2024</span></div><div class="release-label">Pool Side Remix</div></div>
+      </a>
+      <a href="https://soundcloud.com/kosamusica/der-eva-embers-diereva-remix-kosa" target="_blank" class="release-card">
+        <img src="img/embers.png" alt="Der EVA — Embers" class="release-cover">
+        <div class="release-info"><div class="release-title">Der EVA — Embers<span class="release-year">2023</span></div><div class="release-label">kosa</div></div>
+      </a>
+      <a href="https://soundcloud.com/kosamusica/blue-dietrich-mirage-diereva-remix-kosa" target="_blank" class="release-card">
+        <img src="img/mirage.png" alt="blue Dietrich — Mirage" class="release-cover">
+        <div class="release-info"><div class="release-title">blue Dietrich — Mirage<span class="release-year">2023</span></div><div class="release-label">kosa</div></div>
+      </a>
     </div>
   </div>
-  <div class="inner">
+  <div style="max-width:1200px;margin:0 auto;padding:0 48px;box-sizing:border-box;">
     <!-- LIVE SETS -->
     <h2 class="fade-in" style="margin-top:80px">Main Live Sets</h2>
     <a href="https://soundcloud.com/diereva/sets/live?si=dc146ab4a25c4be7ae28aef3a5dc72fe" target="_blank" class="live-link fade-in">▶ Listen to live sets on SoundCloud →</a>
